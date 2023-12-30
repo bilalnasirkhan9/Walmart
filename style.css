@@ -11,6 +11,10 @@ html,body{
     font-family: 'Afacad', sans-serif;
 }
 
+body{
+    overflow-x: hidden;
+}
+
 
 li{
     list-style: none;
@@ -24,12 +28,31 @@ li{
 }
 
 
-.layout-container{
+#layout-container{
     width: 100%;
     min-height: 200vh;
     background-color: #dadada;
+    transition: margin-left 0.2s ease;
 }
 
+#toggle-items{
+    width: 100%;
+    padding: 50px 20px;
+    display: none;
+    opacity: 0;
+}
+
+#menu-toggle-close{
+    font-size: 1.4rem;
+}
+
+.toggle-head-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 30px;
+}
 
 /* ! < _________________ Header Styles _____________> */
 header{
@@ -49,6 +72,21 @@ header{
     z-index: 1000;
     padding: 0px 10px;
 }
+
+#toggle-menu-container{
+    width: 0px;
+    height: 100vh;
+    background-color: #ffffff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+    position: fixed; 
+    display: flex;
+    justify-content: space-between;
+    transition: width 0.2s ease;
+}
+/* ---------------------------------- This is for makeing responsive Project------------------------------- */
 
 .desktop-header-trigger{
     display: flex;
@@ -95,7 +133,6 @@ header{
 }
 
 #input-style:focus{
-    
     outline: 2px solid #f0bd31;
 }
 
@@ -156,16 +193,89 @@ header{
     position: absolute;
     background-color: #0071DC;
     margin: 85px 0;
-    height: 300px;
-    width: 350px; 
+    height: 330px;
+    width: 320px; 
     border-radius: 0px 0px 10px 0px;
     top: 35%;
     left: 0;
+    overflow: hidden;
+    padding: 30px 20px;
+    display: none;
 }
 
+.delivery-system{
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.href-text-simple-white{
+    color: white;
+    font-weight: 300;
+    text-decoration: none;
+    padding-top: 4px;
+}
+
+.delivery-items-process{
+    height: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px;
+}
+
+.address-banner{
+    background-color: #fff;
+    height: 100px;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    padding: 15px 20px;
+}
+
+.super-store-walmart-location{
+    height: 70px;
+    width: 100%;
+    background-color: #fff;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+.address-list{
+    font-size: 0.85rem;
+}
+
+.address-list-location{
+    padding-left: 17px;
+    font-size: 0.90rem;
+}
+
+.addres-btn-styles{
+    width: 100%;
+    border-radius: 100px;
+    background-color: #0071DC;
+    margin: 8px 0px;
+    padding: 7px;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.super-store-walmart-location{
+    padding: 15px 20px;
+}
+
+.store-list-location{
+    padding-left: 15px;
+    font-size: 0.85rem;
+}
 
 #menu-toggle{
     display: none;
+    color: white;
+    font-size: 1.5rem;
     padding: 0 20px;
 }
 
@@ -177,10 +287,6 @@ header{
     display: none;
 }
 
-#menu-toggle{
-    color: white;
-    font-size: 1.5rem;
-}
 
 /* ! < _________________Header Styles _____________> */
 
@@ -199,7 +305,7 @@ header{
 @media (max-width: 1024px){
     .sub-nav-link-container>a{
         display: none;
-      }
+    }
       #menu-toggle{
         display: block;
     }
@@ -219,11 +325,18 @@ header{
 
 }
 
-@media (max-width: 633px){
+@media (max-width: 633px) and (min-width: 280px){
     #media-trigger-address{
         display: none;
+    }
+    #intent-banner-section{
+        padding: 0 10px;
     }
 }
 
 
+
+/* Problem no 1 : max-width 633px into 640px */
+/* Problem no 1 : .drop-down-info => display none */
+/* Problem no 1 : .drop-down-info => width = 320px */
 
