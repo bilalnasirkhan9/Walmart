@@ -11,10 +11,26 @@
     />
   </head>
   <body>
-    <div class="layout-container">
+    <div id="layout-container">
+      <div id="toggle-menu-container">
+        <div id="toggle-items">
+         <div class="toggle-head-bar">
+          <img style="width: 30px; height: 30px;" src="./img/Vector.png" alt="">
+          <i id="menu-toggle-close" class="ri-close-fill" onclick="toggleclick()"></i>
+         </div>
+         <!-- <div class="toggle-body-bar">
+            <li>addres-btn-styles</li>
+            <li>asdfa-flip-horizontal</li>
+            <li>asdfa-flip-horizontal</li>
+            <li>dafdasfa-flip-horizontal</li>
+            <li>dsafda</li>
+            <li>fdafgfa-flip-horizontal</li>
+         </div> -->
+        </div>
+      </div>
       <header>
         <nav id="header-container">
-          <i id="menu-toggle" class="ri-menu-fill"></i>
+          <i class="ri-menu-fill" id="menu-toggle" onclick="toggleclick()"></i>
           <img src="./img/Vector.png" alt="" id="vector-logo" />
           <div class="desktop-header-trigger" id="brand">
             <img
@@ -76,7 +92,12 @@
         </nav>
         <nav id="intent-banner-section">
           <div class="sub-nav-addres-container">
-            <a id="toggle-address" href="#" class="color-white makes-center" onclick="getaddressystem()">
+            <a
+              id="toggle-address"
+              href="#"
+              class="color-white makes-center"
+              onclick="getaddressystem()"
+            >
               <img
                 style="width: 25px; height: 25px"
                 src="./img/mobile.webp"
@@ -84,13 +105,63 @@
               />
               How do you want you items?
               <i class="ri-arrow-right-s-line"></i>
+              <!-----------------------------------------  Working On it ----------------------------------------->
               <div id="drop-down-address" class="drop-down-info">
-                <div class="delivery-system"></div>
+                <ul class="delivery-system">
+                  <a href="#" class="href-text-simple-white">
+                    <div class="delivery-items-process">
+                      <img
+                        style="width: 50px"
+                        src="https://i5.walmartimages.com/dfw/4ff9c6c9-486e/k2-_4be6f532-b0b2-4480-bb65-d53586e87193.v1.png"
+                        alt=""
+                      />
+                      Shipping
+                    </div>
+                  </a>
+                  <a href="#" class="href-text-simple-white">
+                    <div class="delivery-items-process">
+                      <img
+                        style="width: 50px"
+                        src="https://i5.walmartimages.com/dfw/4ff9c6c9-944a/k2-_333618e2-7327-4081-990e-7870dd062248.v1.png"
+                        alt=""
+                      />
+                      Pick up
+                    </div>
+                  </a>
+                  <a href="#" class="href-text-simple-white">
+                    <div class="delivery-items-process">
+                      <img
+                        style="width: 50px"
+                        src="https://i5.walmartimages.com/dfw/4ff9c6c9-4637/k2-_c8d39665-dac4-474a-9fb7-ab5feeb647b5.v1.png"
+                        alt=""
+                      />
+                      Delivery
+                    </div>
+                  </a>
+                </ul>
+                <div class="address-banner">
+                  <li class="address-list">
+                    <i class="ri-map-pin-2-line"></i> Add an address for
+                    shipping and delivery
+                  </li>
+                  <li class="address-list-location">Karachi Pakistan</li>
+                  <button class="addres-btn-styles">Add Address</button>
+                </div>
+                <div class="super-store-walmart-location">
+                  <li class="address-list">
+                    <i class="ri-home-2-line"></i> Karachi Pakistan
+                  </li>
+                  <li class="store-list-location">
+                    Add an address for shipping and delivery
+                  </li>
+                </div>
               </div>
+              <!-----------------------------------------  Working On it ----------------------------------------->
               <a
                 href="#"
                 class="color-white makes-center"
                 id="media-trigger-address"
+                onclick="getaddressystem()"
               >
                 | <i class="ri-map-pin-2-line"></i>
                 Al Fatha Colony
