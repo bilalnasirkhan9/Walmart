@@ -21,28 +21,16 @@ let toggleItems = document.getElementById('toggle-items')
 
 
 function toggleclick(){
-    if (!isDropdownVisible) {;
-            menuToggleCont.style.width = '200px'
-            mainMoveLeft.style.marginLeft = '200px' // Display the dropdown menu
+    if (!isDropdownVisible) {
+            menuToggleCont.style.width = '100vw'
             toggleItems.style.display = 'block'
             toggleItems.style.opacity = '1'
+        
     } else {
-        menuToggleCont.style.width = '0px'
-        mainMoveLeft.style.marginLeft = '0px' // Hide the dropdown menu
+        menuToggleCont.style.width = '0vw'
         toggleItems.style.display = 'none'
         toggleItems.style.opacity = '0'
+
     }
     isDropdownVisible = !isDropdownVisible; // Toggle the state
 }
-
-// function helo() {
-//     if(isDropdownVisible){
-//         menuToggleCont.style.width = '0px'
-//         mainMoveLeft.style.marginLeft = '0px'
-//     }else{
-        
-
-//     }
-
-    
-// }
