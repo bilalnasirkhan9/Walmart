@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Walmart has deals on the most-wanted gifts</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css"
@@ -11,44 +12,91 @@
     />
   </head>
   <body>
-    <div id="layout-container">
-      <div id="toggle-menu-container">
-        <div id="toggle-items">
-         <div class="toggle-head-bar">
-          <img style="width: 30px; height: 30px;" src="./img/Vector.png" alt="">
-          <i id="menu-toggle-close" class="ri-close-fill" onclick="toggleclick()"></i>
-         </div>
-         <!-- <div class="toggle-body-bar">
-            <li>addres-btn-styles</li>
-            <li>asdfa-flip-horizontal</li>
-            <li>asdfa-flip-horizontal</li>
-            <li>dafdasfa-flip-horizontal</li>
-            <li>dsafda</li>
-            <li>fdafgfa-flip-horizontal</li>
-         </div> -->
-        </div>    
+    <div id="layout-container" class="w-full bg-gray-300">
+      <div
+        id="toggle-menu-container"
+        class="bg-white absolute top-0 left-0 fixed flex justify-between transition-width duration-100 ease-in"
+      >
+        <div id="toggle-items"
+        class="w-full">
+          <div class="toggle-head-bar flex items-center justify-between w-full h-30">
+            <img class="w-30 h-30" src="./img/Vector.png" alt="" />
+            <button class="text-white text-sm bg-blue-600 px-4 py-2 rounded-full ">Sign in or create account</button>
+            <i
+              id="menu-toggle-close"
+              class="ri-close-fill text-black text-lg cursor-pointer"
+              onclick="toggleclick()"
+            ></i>
+          </div>
+          <ul class="w-full h-full my-12">
+            <a href="#" class="flex items-center gap-4 py-2 text-slate-500">
+              <i class="ri-list-view"></i>
+              Purchase History
+            </a>
+            <a href="#" class="flex items-center gap-4 py-2 text-slate-500">
+              <i class="ri-draft-line"></i>
+              My Items
+            </a>
+            <a href="#" class="flex items-center gap-4 py-2 text-slate-500">
+              <i class="ri-user-3-line"></i>
+              Account
+            </a>
+            <hr class="border-t border-gray-300 my-3">
+            <a href="#" class="flex items-center gap-4 py-1 text-slate-500">
+              <i class="ri-question-line"></i>
+              Help
+            </a>
+            <hr class="border-t border-gray-300 my-3">
+            <a href="#" class="flex items-center gap-4 py-1 text-slate-500">
+              <i class="ri-heart-3-line"></i>
+              Lists
+            </a>
+            <a href="#" class="flex items-center gap-4 py-1 text-slate-500">
+              <i class="ri-gift-line"></i>
+              Registries
+            </a>
+            <hr class="border-t border-gray-300 my-3">
+            <a href="#" class="flex items-center gap-4 py-1 text-slate-500">
+              <i class="ri-grid-fill"></i>
+              Departments
+              <i class="ri-arrow-right-s-line"></i>
+            </a>
+            <a href="#" class="flex items-center gap-4 py-1 text-slate-500">
+              <i class="ri-layout-grid-fill"></i>
+              Services
+              <i class="ri-arrow-right-s-line"></i>
+            </a>
+            <hr class="border-t border-gray-300 my-3">
+            <a href="#" class="flex items-center gap-4 py-2 text-slate-500">
+              <i class="ri-chat-1-line"></i>
+              Give Feedback
+            </a>
+          </ul>
+        </div>
       </div>
       <header>
-        <nav id="header-container">
-          <i class="ri-menu-fill" id="menu-toggle" onclick="toggleclick()"></i>
+        <nav id="header-container"
+        class="flex items-center bg-blue-600 w-full h-20 sticky top-0 z-10 px-4"
+        >
+          <i class="ri-menu-fill text-white text-lg px-6" id="menu-toggle" onclick="toggleclick()"></i>
           <img src="./img/Vector.png" alt="" id="vector-logo" />
-          <div class="desktop-header-trigger" id="brand">
+          <div class="desktop-header-trigger " id="brand">
             <img
               src="https://i5.walmartimages.com/dfw/63fd9f59-b3e1/7a569e53-f29a-4c3d-bfaf-6f7a158bfadd/v1/walmartLogo.svg"
               alt="logo"
             />
           </div>
-          <ul class="ul-holder-links">
+          <ul class="flex items-center w-full h-4/5">
             <a
               href="#"
-              class="desktop-header-trigger color-white makes-center meida-trigger"
+              class="desktop-header-trigger text-white no-underline font-extrabold text-lg makes-center meida-trigger"
             >
               <i class="ri-grid-fill"></i>
               Departments
             </a>
             <a
               href="#"
-              class="desktop-header-trigger color-white makes-center meida-trigger"
+              class="desktop-header-trigger text-white no-underline font-extrabold text-lg makes-center meida-trigger"
             >
               <i class="ri-layout-grid-fill"></i>
               Services
@@ -62,31 +110,30 @@
             </div>
             <a
               href="#"
-              class="color-white desktop-header-trigger makes-center meida-trigger"
+              class="text-white no-underline font-extrabold text-lg desktop-header-trigger makes-center meida-trigger"
             >
               <i class="ri-heart-3-line"></i>
-              <div class="nowrap">
-                <span class="short-list">Recorder</span>
-                My Items
+              <div class="flex flex-col w-70 flex-no-wrap leading-4">
+                <span class="text-sm opacity-80">Recorder</span>
+                Items
               </div>
             </a>
             <a
               href="#"
-              class="color-white desktop-header-trigger makes-center meida-trigger"
+              class="text-white no-underline font-extrabold text-lg desktop-header-trigger makes-center meida-trigger"
             >
               <i class="ri-user-3-line"></i>
-              <div class="nowrap">
-                <span class="short-list">Sign In</span>
+              <div class="flex flex-col w-70 flex-no-wrap leading-4">
+                <span class="text-sm opacity-80">Sign In</span>
                 Account
               </div>
             </a>
             <a
               href="#"
-              style="line-height: 8px"
-              class="color-white desktop-header-trigger makes-center nowrap"
+              class="text-white flex items-center flex-col gap-0 px-4 py-1 desktop-header-trigger meida-trigger"
             >
-              <i class="ri-shopping-cart-line"></i>
-              <span class="short-list">$0.00</span>
+              <i class="ri-shopping-cart-line text-lg"></i>
+              <span class="text-sm opacity-80">$0.00</span>
             </a>
           </ul>
         </nav>
@@ -95,7 +142,7 @@
             <a
               id="toggle-address"
               href="#"
-              class="color-white makes-center"
+              class="text-white no-underline font-extrabold text-lg makes-center"
               onclick="getaddressystem()"
             >
               <img
@@ -105,10 +152,9 @@
               />
               How do you want you items?
               <i class="ri-arrow-right-s-line"></i>
-              <!-----------------------------------------  Working On it ----------------------------------------->
               <div id="drop-down-address" class="drop-down-info">
                 <ul class="delivery-system">
-                  <a href="#" class="href-text-simple-white">
+                  <a href="#" class="text-white">
                     <div class="delivery-items-process">
                       <img
                         style="width: 50px"
@@ -118,7 +164,7 @@
                       Shipping
                     </div>
                   </a>
-                  <a href="#" class="href-text-simple-white">
+                  <a href="#" class="text-white">
                     <div class="delivery-items-process">
                       <img
                         style="width: 50px"
@@ -128,7 +174,7 @@
                       Pick up
                     </div>
                   </a>
-                  <a href="#" class="href-text-simple-white">
+                  <a href="#" class="text-white">
                     <div class="delivery-items-process">
                       <img
                         style="width: 50px"
@@ -140,26 +186,25 @@
                   </a>
                 </ul>
                 <div class="address-banner">
-                  <li class="address-list">
+                  <li class="text-xs">
                     <i class="ri-map-pin-2-line"></i> Add an address for
                     shipping and delivery
                   </li>
-                  <li class="address-list-location">Karachi Pakistan</li>
-                  <button class="addres-btn-styles">Add Address</button>
+                  <li class="pl-5 text-xs">Karachi Pakistan</li>
+                  <button class="w-full rounded-full bg-blue-500 my-2 px-7 py-2 border-none text-white cursor-pointer">Add Address</button>
                 </div>
-                <div class="super-store-walmart-location">
-                  <li class="address-list">
+                <div class="h-70 w-full bg-white mt-4 mb-5 rounded-lg p-4">
+                  <li class="text-xs">
                     <i class="ri-home-2-line"></i> Karachi Pakistan
                   </li>
-                  <li class="store-list-location">
+                  <li class="pl-25 text-xs">
                     Add an address for shipping and delivery
                   </li>
                 </div>
               </div>
-              <!-----------------------------------------  Working On it ----------------------------------------->
               <a
                 href="#"
-                class="color-white makes-center"
+                class="text-white no-underline font-extrabold text-base makes-center"
                 id="media-trigger-address"
                 onclick="getaddressystem()"
               >
@@ -184,7 +229,6 @@
         </nav>
       </header>
     </div>
-
     <script src="script.js"></script>
   </body>
 </html>
